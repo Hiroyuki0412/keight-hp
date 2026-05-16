@@ -1,0 +1,65 @@
+/**
+ * エイト薬局 — デザイントークン（モダンUI）
+ */
+
+:root {
+  /* Color */
+  --color-primary: #1a367c;
+  --color-primary-dark: #0f2249;
+  --color-primary-light: #2d4a9e;
+  --color-accent: #4f7cff;
+  --color-accent-soft: rgba(79, 124, 255, 0.12);
+
+  --color-line: #06c755;
+  --color-line-dark: #049940;
+  --color-line-soft: rgba(6, 199, 85, 0.1);
+
+  --color-bg: #f7f8fc;
+  --color-bg-elevated: #ffffff;
+  --color-bg-hero: linear-gradient(145deg, #f0f4ff 0%, #fafbff 40%, #f5f9f0 100%);
+  --color-bg-muted: #eef1f8;
+
+  --color-text: #1a1d26;
+  --color-text-muted: #5c6370;
+  --color-text-inverse: #ffffff;
+
+  --color-border: rgba(26, 54, 124, 0.1);
+  --color-border-strong: rgba(26, 54, 124, 0.18);
+
+  --color-faq-q: #6b5ce7;
+
+  /* Typography */
+  --font-family-base: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  --font-size-hero: clamp(1.75rem, 4.5vw, 2.75rem);
+  --font-size-section: clamp(1.375rem, 2.5vw, 1.75rem);
+  --font-size-body: 1rem;
+  --font-size-small: 0.875rem;
+  --line-height-body: 1.75;
+  --letter-tight: -0.02em;
+
+  /* Spacing */
+  --space-section-y: clamp(4rem, 8vw, 6rem);
+  --space-section-x: clamp(1.25rem, 4vw, 2rem);
+  --container-max: 1120px;
+
+  /* Shape */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 2px rgba(26, 54, 124, 0.06);
+  --shadow-md: 0 8px 24px rgba(26, 54, 124, 0.08);
+  --shadow-lg: 0 20px 48px rgba(26, 54, 124, 0.12);
+  --shadow-card: 0 4px 20px rgba(26, 54, 124, 0.06);
+
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+  --header-height: 72px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition: 0.01ms;
+  }
+}

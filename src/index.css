@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#faq-root {
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+  --border: 214 24% 88%;
+  --radius: 0.625rem;
+}
+
+#faq-root .faq-accordion-ui {
+  width: 100%;
+}
+
+#faq-root .faq-accordion-item {
+  margin-bottom: 0.75rem;
+  padding: 0 0.25rem 0 1rem;
+  background: #fff;
+  border: 1px solid hsl(var(--border)) !important;
+  border-radius: 0.625rem;
+  box-shadow: 0 1px 3px rgba(26, 54, 124, 0.06);
+}
+
+#faq-root .faq-timing-table {
+  border-collapse: collapse;
+}
+
+#faq-root .faq-timing-table th,
+#faq-root .faq-timing-table td {
+  padding: 0.65rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+#faq-root .faq-timing-table th {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1a367c;
+  background: rgba(79, 124, 255, 0.08);
+}
+
+#faq-root .faq-timing-table tr:last-child td {
+  border-bottom: none;
+}

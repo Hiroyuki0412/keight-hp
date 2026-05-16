@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="東京都大田区大森のエイト薬局。処方せん調剤・在宅訪問・お薬相談・LINE受付。地域のかかりつけ薬局として健やかな暮らしをサポートします。" />
+  <meta name="theme-color" content="#1a367c" />
+  <title>エイト薬局｜東京都大田区大森の調剤薬局</title>
+  <link rel="icon" href="assets/logo-vertical.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Pharmacy",
+    "name": "エイト薬局",
+    "url": "https://k-eight.co.jp/",
+    "telephone": "+81-3-6271-6284",
+    "email": "eight.pharmacy@k-eight.co.jp",
+    "address": {
+      "@type": "PostalAddress",
+      "postalCode": "143-0012",
+      "streetAddress": "大森東1-4-5 サワビル1階",
+      "addressLocality": "大田区",
+      "addressRegion": "東京都",
+      "addressCountry": "JP"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Thursday", "Saturday"],
+        "opens": "09:00",
+        "closes": "13:00"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header" id="header">
+    <div class="site-header__inner container">
+      <a href="#" class="site-header__brand">
+        <img
+          class="site-header__logo"
+          src="assets/logo-header.png"
+          width="200"
+          height="48"
+          alt="エイト薬局 処方せん受付"
+        />
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="メインナビゲーション">
+        <a href="#features">サービス</a>
+        <a href="#line">LINE相談</a>
+        <a href="#faq">よくある質問</a>
+        <a href="#access">アクセス</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <p class="hero-location-badge">
+            <span class="hero-location-badge__icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </span>
+            <span class="hero-location-badge__text">
+              <strong>東京都大田区大森</strong>の調剤薬局
+            </span>
+          </p>
+          <h1 class="hero__title">
+            健やかな暮らしの<br />
+            <span class="text-gradient">身近なパートナー</span>
+          </h1>
+          <p class="hero__lead">
+            処方せん調剤から在宅訪問・お薬相談・地域包括ケアまで。エイト薬局は、わかりやすく丁寧な薬局サービスをお届けします。
+          </p>
+          <div class="hero-hours-card" aria-label="営業時間">
+            <div class="hero-hours-card__header">
+              <div class="hero-hours-card__title">
+                <span class="hero-hours-card__icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 6v6l4 2"/>
+                  </svg>
+                </span>
+                <span class="hero-hours-card__label">営業時間</span>
+              </div>
+            </div>
+            <dl class="hero-hours-card__schedule">
+              <div class="hero-hours-card__row">
+                <dt>月・火・水・金</dt>
+                <dd>
+                  <span class="hero-hours-card__time">9:00</span>
+                  <span class="hero-hours-card__dash" aria-hidden="true">–</span>
+                  <span class="hero-hours-card__time">18:00</span>
+                </dd>
+              </div>
+              <div class="hero-hours-card__row">
+                <dt>木・土</dt>
+                <dd>
+                  <span class="hero-hours-card__time">9:00</span>
+                  <span class="hero-hours-card__dash" aria-hidden="true">–</span>
+                  <span class="hero-hours-card__time">13:00</span>
+                </dd>
+              </div>
+            </dl>
+            <div class="hero-hours-card__footer">
+              <span class="hero-hours-card__badge">定休日</span>
+              <span class="hero-hours-card__closed">日曜・祝日</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-label">Services</span>
+          <h2 class="section-title">エイト薬局なら</h2>
+          <p class="section-desc">地域に根ざした、安心の薬局サービスをご提供します</p>
+        </header>
+        <div class="service-rows reveal">
+          <article class="service-row service-row--showcase" data-service-sequence>
+            <div class="service-showcase">
+              <video
+                class="service-showcase__bg"
+                src="assets/service-showcase-1.mp4"
+                poster="assets/service-pharmacist-1.png"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-label="笑顔でご相談に応じる薬剤師"
+              ></video>
+              <div class="service-showcase__overlay service-showcase__overlay--left" aria-live="polite">
+                <div class="service-showcase__stack">
+                  <p class="service-showcase__text" data-order="0">どの病院の処方せんでも受付</p>
+                  <p class="service-showcase__text" data-order="1">マイナンバーカード対応</p>
+                  <p class="service-showcase__text" data-order="2">在宅・訪問対応</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-row service-row--showcase service-row--stack" data-service-sequence>
+            <div class="service-showcase">
+              <video
+                class="service-showcase__bg"
+                src="assets/service-showcase-2.mp4"
+                poster="assets/service-pharmacist-2.png"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-label="処方せんを丁寧に調剤する薬剤師"
+              ></video>
+              <div class="service-showcase__overlay service-showcase__overlay--stack-left" aria-live="polite">
+                <div class="service-showcase__stack">
+                  <p class="service-showcase__text" data-order="0">お薬の相談</p>
+                  <p class="service-showcase__text" data-order="1">一包化サービス</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-row service-row--showcase service-row--stack" data-service-sequence>
+            <div class="service-showcase">
+              <video
+                class="service-showcase__bg"
+                src="assets/service-showcase-3.mp4"
+                poster="assets/service-pharmacist-3.png"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                aria-label="患者さまと相談する薬剤師"
+              ></video>
+              <div class="service-showcase__overlay service-showcase__overlay--stack-left" aria-live="polite">
+                <div class="service-showcase__stack">
+                  <p class="service-showcase__text" data-order="0">地域包括ケア</p>
+                  <p class="service-showcase__text" data-order="1">健康教育・講座</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="line" class="section section--line">
+      <div class="container">
+        <div class="line-banner reveal">
+          <div class="line-banner__content">
+            <h2 class="line-banner__title">LINEでお薬相談</h2>
+            <p class="line-banner__lead">友だち追加後、処方せんの送信やお薬に関するご相談ができます。</p>
+            <ol class="line-steps">
+              <li><span>1</span> QRを読み取る</li>
+              <li><span>2</span> 友だち追加</li>
+              <li><span>3</span> 処方せん送信</li>
+            </ol>
+            <div class="line-banner__actions">
+              <a class="btn btn--white" href="https://lin.ee/placeholder" target="_blank" rel="noopener noreferrer">LINEで開く</a>
+              <p class="line-note">※ QR・URLは公式アカウント確定後に差し替え</p>
+            </div>
+          </div>
+          <div class="line-banner__qr">
+            <img
+              src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://lin.ee/placeholder"
+              width="200"
+              height="200"
+              alt="LINE公式アカウント QRコード"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section section--muted">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-label">FAQ</span>
+          <h2 class="section-title">お薬についてよくあるご質問</h2>
+        </header>
+        <div class="faq-grid faq-grid--single reveal">
+          <div class="faq-accordion" data-faq-accordion>
+            <details class="faq-item" open>
+              <summary class="faq-item__trigger">
+                <span class="faq-item__head">
+                  <svg class="faq-item__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                  <span>処方せんの有効期限はどのくらいですか？</span>
+                </span>
+                <svg class="faq-item__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </summary>
+              <div class="faq-item__content">
+                <p>交付日を含めて原則<strong>4日間</strong>です。お早めにご持参ください。期限が近い・過ぎている場合も、まずはお電話でご相談ください。</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__trigger">
+                <span class="faq-item__head">
+                  <svg class="faq-item__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  <span>食前・食後・食間の違いは？</span>
+                </span>
+                <svg class="faq-item__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </summary>
+              <div class="faq-item__content">
+                <p>お薬によって最適な服用タイミングが異なります。下の表をご参照いただくか、薬剤師にお尋ねください。</p>
+                <div class="faq-timing-table-wrap">
+                  <table class="faq-timing-table">
+                    <thead>
+                      <tr><th>表記</th><th>目安</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>食前</td><td>食事の30分〜1時間前</td></tr>
+                      <tr><td>食後</td><td>食事直後</td></tr>
+                      <tr><td>食間</td><td>食前・食後2時間以上あけて</td></tr>
+                      <tr><td>就寝前</td><td>寝る直前</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__trigger">
+                <span class="faq-item__head">
+                  <svg class="faq-item__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m10.5 20.5 10.5 7.5 3 3"/><path d="M14 7h.01"/><path d="M18 11h.01"/><path d="M6 15h.01"/></svg>
+                  <span>ジェネリック医薬品は選べますか？</span>
+                </span>
+                <svg class="faq-item__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </summary>
+              <div class="faq-item__content">
+                <p>はい。同等の効果が期待できるジェネリック医薬品への変更について、薬剤師がご説明し、ご希望に応じて対応いたします。</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="payment" class="section">
+      <div class="container reveal">
+        <header class="section-head">
+          <span class="section-label">Payment</span>
+          <h2 class="section-title">お支払い方法</h2>
+        </header>
+        <div class="payment-card">
+          <p>現金のほか、各種クレジットカード・電子マネー（交通系IC、iD、QUICPay など）・QRコード決済をご利用いただけます。</p>
+          <div class="payment-brands" aria-label="ご利用可能なカードブランド">
+            <img src="assets/payment/visa.svg" alt="Visa" width="78" height="50" loading="lazy" decoding="async" />
+            <img src="assets/payment/mastercard.svg" alt="Mastercard" width="78" height="50" loading="lazy" decoding="async" />
+            <img src="assets/payment/jcb.svg" alt="JCB" width="78" height="50" loading="lazy" decoding="async" />
+            <img src="assets/payment/amex.svg" alt="American Express" width="78" height="50" loading="lazy" decoding="async" />
+            <img src="assets/payment/diners.svg" alt="Diners Club" width="78" height="50" loading="lazy" decoding="async" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="access" class="section section--muted">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-label">Access</span>
+          <h2 class="section-title">アクセス</h2>
+        </header>
+        <div class="access-card reveal">
+          <div class="access-card__map">
+            <iframe
+              title="エイト薬局 地図"
+              src="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%A4%A7%E7%94%B0%E5%8C%BA%E5%A4%A7%E6%A3%AE%E6%9D%B11-4-5+%E3%82%B5%E3%83%AF%E3%83%93%E3%83%AB&hl=ja&z=17&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="access-card__info">
+            <h3>エイト薬局</h3>
+            <dl>
+              <div><dt>営業時間</dt><dd>月・火・水・金 9:00–18:00<br />木・土 9:00–13:00</dd></div>
+              <div><dt>定休日</dt><dd>日曜・祝日</dd></div>
+              <div><dt>住所</dt><dd>〒143-0012<br />東京都大田区大森東1-4-5 サワビル1階</dd></div>
+              <div><dt>電話</dt><dd><a href="tel:0362716284">03-6271-6284</a></dd></div>
+              <div><dt>FAX</dt><dd>03-6271-6285</dd></div>
+              <div><dt>メール</dt><dd><a href="mailto:eight.pharmacy@k-eight.co.jp">eight.pharmacy@k-eight.co.jp</a></dd></div>
+            </dl>
+            <a class="btn btn--primary btn--lg access-tel" href="tel:0362716284">03-6271-6284</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="notice-banner container reveal" aria-labelledby="notice-title">
+    <div class="notice-card">
+      <div class="notice-card__header">
+        <span class="notice-card__icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+        </span>
+        <div class="notice-card__heading">
+          <span class="notice-card__label">安心・安全</span>
+          <h2 id="notice-title">感染症対策について</h2>
+        </div>
+      </div>
+      <ul class="notice-card__list">
+        <li class="notice-card__item">
+          <span class="notice-card__item-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+          </span>
+          <p>店内の換気・消毒を実施しています</p>
+        </li>
+        <li class="notice-card__item">
+          <span class="notice-card__item-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 11c1.66 0 3-1.34 3-3V5H9v3c0 1.66 1.34 3 3 3z"/><path d="M7 11h10v2a5 5 0 0 1-10 0v-2z"/><path d="M9 17v2M15 17v2"/></svg>
+          </span>
+          <p>体調不良時はマスク着用にご協力ください</p>
+        </li>
+        <li class="notice-card__item">
+          <span class="notice-card__item-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <p>発熱等がある方は、事前に<strong>LINE</strong>または<strong>お電話</strong>でご連絡いただくとスムーズです</p>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__contact">
+        〒143-0012 東京都大田区大森東1-4-5 サワビル1階<br />
+        TEL <a href="tel:0362716284">03-6271-6284</a>　FAX 03-6271-6285<br />
+        <a href="mailto:eight.pharmacy@k-eight.co.jp">eight.pharmacy@k-eight.co.jp</a>
+      </p>
+      <p>© 2026 株式会社K-エイト　エイト薬局</p>
+    </div>
+  </footer>
+
+  <a class="float-cta btn btn--line" href="https://lin.ee/placeholder" target="_blank" rel="noopener noreferrer" aria-label="LINEで処方せん送信">
+    LINE
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

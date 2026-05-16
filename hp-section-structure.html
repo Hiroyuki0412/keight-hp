@@ -1,0 +1,78 @@
+<!--
+  薬局HP 雛形 — HTMLセクション骨組み（コメントのみ・実装のたたき台）
+  画像: スマートスマイル薬局 LP をベース
+-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>【薬局名】｜地域のかかりつけ薬局</title>
+  <link rel="stylesheet" href="design-tokens.css" />
+</head>
+<body>
+
+  <!-- ① ヘッダー: ロゴ / 電話 / LINE CTA + アンカーナビ -->
+  <header class="site-header">
+    <div class="site-header__top">
+      <!-- logo + 薬局名 -->
+      <!-- tel: 03-0000-0000 -->
+      <!-- a.btn-line → LINE処方せん -->
+    </div>
+    <nav class="site-header__nav">
+      <!-- #faq | #payment | #access -->
+    </nav>
+  </header>
+
+  <main>
+    <!-- ② ヒーロー: キャッチ + 営業時間 + イラスト -->
+    <section id="hero" class="section section--hero">
+      <!-- h1 + リード文 | 薬剤師イラスト -->
+    </section>
+
+    <!-- ③ 特徴: 「〇〇薬局なら」7〜8カード -->
+    <section id="features" class="section section--features">
+      <h2>〇〇薬局なら</h2>
+      <div class="features-grid">
+        <!-- .card-feature × 7 -->
+      </div>
+    </section>
+
+    <!-- ④ LINE: QR + 緑見出し -->
+    <section id="line" class="section section--line">
+      <h2>LINEでお薬相談</h2>
+      <!-- img QR / スマホイラスト -->
+    </section>
+
+    <!-- ⑤ FAQ -->
+    <section id="faq" class="section section--faq">
+      <h2>お薬についてよくあるご質問</h2>
+      <!-- .faq-item × 3 + table（食前/食後/食間） -->
+    </section>
+
+    <!-- ⑥ お支払い -->
+    <section id="payment" class="section section--payment">
+      <h2>お支払い方法</h2>
+      <!-- テキスト + カードロゴ img row -->
+    </section>
+
+    <!-- ⑦ アクセス -->
+    <section id="access" class="section section--access">
+      <h2>アクセス</h2>
+      <!-- iframe map | 住所・時間・電話 -->
+    </section>
+
+    <!-- ⑧ お知らせ -->
+    <aside class="notice-box">
+      <div class="notice-box__header">薬局内でのマスク着用について</div>
+      <div class="notice-box__body"><!-- 本文 --></div>
+    </aside>
+  </main>
+
+  <!-- ⑨ フッター -->
+  <footer class="site-footer">
+    <p>© 2026 【薬局名】</p>
+  </footer>
+
+</body>
+</html>
