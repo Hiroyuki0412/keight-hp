@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "line:url": "node scripts/generate-site-config.mjs",
+    "predev": "node scripts/generate-site-config.mjs || true",
+    "prebuild": "node scripts/generate-site-config.mjs",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"

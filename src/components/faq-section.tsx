@@ -78,7 +78,6 @@ export function FaqSection() {
       type="single"
       collapsible
       className="faq-accordion-ui w-full"
-      defaultValue="1"
     >
       {items.map((item) => (
         <AccordionItem value={item.id} key={item.id} className="faq-accordion-item border-0">

@@ -67,6 +67,7 @@
         <a href="#line">LINE相談</a>
         <a href="#faq">よくある質問</a>
         <a href="#access">アクセス</a>
+        <a class="btn btn--line site-nav__line" data-line-link href="#">LINEで処方せん</a>
       </nav>
     </div>
   </header>
@@ -223,16 +224,16 @@
               <li><span>3</span> 処方せん送信</li>
             </ol>
             <div class="line-banner__actions">
-              <a class="btn btn--white" href="https://lin.ee/placeholder" target="_blank" rel="noopener noreferrer">LINEで開く</a>
-              <p class="line-note">※ QR・URLは公式アカウント確定後に差し替え</p>
+              <a class="btn btn--white" data-line-link href="#">LINEで開く</a>
             </div>
           </div>
           <div class="line-banner__qr">
             <img
-              src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://lin.ee/placeholder"
+              id="line-qr"
+              src=""
               width="200"
               height="200"
-              alt="LINE公式アカウント QRコード"
+              alt="エイト薬局 LINE公式アカウント QRコード"
             />
           </div>
         </div>
@@ -247,7 +248,7 @@
         </header>
         <div class="faq-grid faq-grid--single reveal">
           <div class="faq-accordion" data-faq-accordion>
-            <details class="faq-item" open>
+            <details class="faq-item">
               <summary class="faq-item__trigger">
                 <span class="faq-item__head">
                   <svg class="faq-item__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
@@ -348,7 +349,6 @@
               <div><dt>FAX</dt><dd>03-6271-6285</dd></div>
               <div><dt>メール</dt><dd><a href="mailto:eight.pharmacy@k-eight.co.jp">eight.pharmacy@k-eight.co.jp</a></dd></div>
             </dl>
-            <a class="btn btn--primary btn--lg access-tel" href="tel:0362716284">03-6271-6284</a>
           </div>
         </div>
       </div>
@@ -403,10 +403,11 @@
     </div>
   </footer>
 
-  <a class="float-cta btn btn--line" href="https://lin.ee/placeholder" target="_blank" rel="noopener noreferrer" aria-label="LINEで処方せん送信">
+  <a class="float-cta btn btn--line" data-line-link href="#" aria-label="LINEで処方せん送信">
     LINE
   </a>
 
+  <script src="js/site-config.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

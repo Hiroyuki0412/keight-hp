@@ -1,4 +1,49 @@
-/** ヘッダースクロール・モバイルナビ・スクロールアニメーション */
+/** ヘッダースクロール・モバイルナビ・LINEリンク・スクロールアニメーション */
+
+function applyLineLinks() {
+  const url = window.SITE_CONFIG?.LINE_ADD_FRIEND_URL;
+  if (!url || url.includes("placeholder")) {
+    console.warn(
+      "[エイト薬局] LINE URL未設定です。npm run line:url を実行するか .env に VITE_LINE_ADD_FRIEND_URL を設定してください。"
+    );
+    return;
+  }
+
+  document.querySelectorAll("[data-line-link]").forEach((el) => {
+    el.setAttribute("href", url);
+    if (el.tagName === "A") {
+      el.setAttribute("target", "_blank");
+      el.setAttribute("rel", "noopener noreferrer");
+    }
+  });
+
+  const qr = document.getElementById("line-qr");
+  if (qr) {
+    const encoded = encodeURIComponent(url);
+    qr.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encoded}`;
+    qr.alt = "エイト薬局 LINE公式アカウント QRコード";
+  }
+}
+
+applyLineLinks();
+
+function applyMapEmbed() {
+  const map = window.SITE_CONFIG?.MAP;
+  const iframe = document.getElementById("access-map");
+  const link = document.getElementById("access-map-link");
+  if (!map || !iframe) return;
+
+  const { lat, lng, label, address } = map;
+  const query = encodeURIComponent(`${label} ${address}`);
+  iframe.src = `https://www.google.com/maps?q=${lat},${lng}&hl=ja&z=18&output=embed`;
+
+  if (link) {
+    link.href = `https://www.google.com/maps/search/?api=1&query=${query}`;
+    link.setAttribute("aria-label", `${label}をGoogleマップで開く`);
+  }
+}
+
+applyMapEmbed();
 
 const header = document.getElementById("header");
 const navToggle = document.querySelector(".nav-toggle");
