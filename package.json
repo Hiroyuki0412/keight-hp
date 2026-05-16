@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "line:url": "node scripts/generate-site-config.mjs",
-    "predev": "node scripts/generate-site-config.mjs || true",
-    "prebuild": "node scripts/generate-site-config.mjs",
+    "sync:public": "node scripts/sync-public.mjs",
+    "predev": "node scripts/generate-site-config.mjs && node scripts/sync-public.mjs",
+    "prebuild": "node scripts/generate-site-config.mjs && node scripts/sync-public.mjs",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"

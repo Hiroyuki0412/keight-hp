@@ -1,5 +1,6 @@
 /** ヘッダースクロール・モバイルナビ・LINEリンク・スクロールアニメーション */
 
+/** LINE友だち追加URLをボタン・QRに反映 */
 function applyLineLinks() {
   const url = window.SITE_CONFIG?.LINE_ADD_FRIEND_URL;
   if (!url || url.includes("placeholder")) {
@@ -26,6 +27,25 @@ function applyLineLinks() {
 }
 
 applyLineLinks();
+
+/** Googleマップ：薬局位置にピン付きで表示 */
+function applyMapEmbed() {
+  const map = window.SITE_CONFIG?.MAP;
+  const iframe = document.getElementById("access-map");
+  const link = document.getElementById("access-map-link");
+  if (!map || !iframe) return;
+
+  const { lat, lng, label, address } = map;
+  const query = encodeURIComponent(`${label} ${address}`);
+  iframe.src = `https://www.google.com/maps?q=${lat},${lng}&hl=ja&z=18&output=embed`;
+
+  if (link) {
+    link.href = `https://www.google.com/maps/search/?api=1&query=${query}`;
+    link.setAttribute("aria-label", `${label}をGoogleマップで開く`);
+  }
+}
+
+applyMapEmbed();
 
 const header = document.getElementById("header");
 const navToggle = document.querySelector(".nav-toggle");
@@ -150,3 +170,16 @@ function initServiceSequences() {
 }
 
 initServiceSequences();
+
+/* FAQ：1つだけ開く（アコーディオン） */
+document.querySelectorAll("[data-faq-accordion]").forEach((root) => {
+  const items = root.querySelectorAll(".faq-item");
+  items.forEach((item) => {
+    item.addEventListener("toggle", () => {
+      if (!item.open) return;
+      items.forEach((other) => {
+        if (other !== item) other.open = false;
+      });
+    });
+  });
+});
