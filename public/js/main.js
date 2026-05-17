@@ -33,15 +33,20 @@ function applyMapEmbed() {
   const map = window.SITE_CONFIG?.MAP;
   const iframe = document.getElementById("access-map");
   const link = document.getElementById("access-map-link");
+  const tap = document.getElementById("access-map-tap");
   if (!map || !iframe) return;
 
   const { lat, lng, label, address } = map;
   const query = encodeURIComponent(`${label} ${address}`);
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${query}`;
   iframe.src = `https://www.google.com/maps?q=${lat},${lng}&hl=ja&z=18&output=embed`;
 
-  if (link) {
-    link.href = `https://www.google.com/maps/search/?api=1&query=${query}`;
-    link.setAttribute("aria-label", `${label}をGoogleマップで開く`);
+  for (const el of [link, tap]) {
+    if (!el) continue;
+    el.href = mapsUrl;
+    if (el === link) {
+      el.setAttribute("aria-label", `${label}をGoogleマップで開く`);
+    }
   }
 }
 
