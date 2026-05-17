@@ -22,7 +22,7 @@ function applyLineLinks() {
   if (qr) {
     const encoded = encodeURIComponent(url);
     qr.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encoded}`;
-    qr.alt = "エイト薬局 LINE公式アカウント QRコード";
+    qr.alt = "エイト薬局本店 LINE公式アカウント QRコード";
   }
 }
 
@@ -33,12 +33,14 @@ let accessLeafletMap = null;
 
 function buildMapBadgeHtml(label, mapsUrl) {
   return `
-    <a class="access-card__map-badge" href="${mapsUrl}" target="_blank" rel="noopener noreferrer" aria-label="${label}をGoogleマップで開く">
-      <span class="access-card__map-badge-pin" aria-hidden="true">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
-      </span>
-      <span class="access-card__map-badge-text">${label}</span>
-    </a>
+    <div class="access-map-marker-root">
+      <a class="access-card__map-badge" href="${mapsUrl}" target="_blank" rel="noopener noreferrer" aria-label="${label}をGoogleマップで開く">
+        <span class="access-card__map-badge-pin" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+        </span>
+        <span class="access-card__map-badge-text">${label}</span>
+      </a>
+    </div>
   `;
 }
 
@@ -77,7 +79,7 @@ function applyMapEmbed() {
   const icon = L.divIcon({
     className: "access-map-marker-icon",
     html: buildMapBadgeHtml(label, mapsUrl),
-    iconSize: [1, 1],
+    iconSize: [0, 0],
     iconAnchor: [0, 0],
   });
 

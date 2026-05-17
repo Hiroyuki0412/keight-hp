@@ -1127,8 +1127,14 @@ a {
   border: none !important;
 }
 
-.access-map-marker-icon .access-card__map-badge {
+.access-map-marker-root {
   position: relative;
+  width: 0;
+  height: 0;
+}
+
+.access-map-marker-root .access-card__map-badge {
+  position: absolute;
   left: 0;
   top: 0;
   transform: translate(-50%, -100%);

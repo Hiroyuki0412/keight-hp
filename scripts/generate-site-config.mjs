@@ -82,7 +82,7 @@ async function main() {
     process.exit(1);
   }
 
-  const content = `/** 自動生成 — scripts/generate-site-config.mjs */\nwindow.SITE_CONFIG = {\n  LINE_ADD_FRIEND_URL: ${JSON.stringify(url)},\n  MAP: {\n    lat: 35.588336,\n    lng: 139.731612,\n    zoom: 18,\n    label: "エイト薬局",\n    address: "〒143-0012 東京都大田区大森東1-4-5 サワビル1階",\n  },\n};\n`;
+  const content = `/** 自動生成 — scripts/generate-site-config.mjs */\nwindow.SITE_CONFIG = {\n  LINE_ADD_FRIEND_URL: ${JSON.stringify(url)},\n  MAP: {\n    lat: 35.575413,\n    lng: 139.73526,\n    zoom: 19,\n    label: "エイト薬局本店",\n    address: "〒143-0012 東京都大田区大森東1-4-5 サワビル1階",\n  },\n};\n`;
 
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
   fs.writeFileSync(outPath, content);
