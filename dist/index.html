@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -42,7 +43,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" crossorigin href="./assets/main-BYa5F1tC.css">
+  <link rel="stylesheet" crossorigin href="./assets/main-Dudxh2oX.css">
 </head>
 <body>
 
@@ -331,34 +332,12 @@
         </header>
         <div class="access-card reveal">
           <div class="access-card__map">
-            <iframe
+            <div
               id="access-map"
-              title="エイト薬局 地図"
-              src=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              tabindex="-1"
-            ></iframe>
-            <a
-              class="access-card__map-tap"
-              id="access-map-tap"
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Googleマップで開く"
-            ></a>
-            <a
-              class="access-card__map-badge"
-              id="access-map-link"
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="access-card__map-badge-pin" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
-              </span>
-              <span class="access-card__map-badge-text">エイト薬局</span>
-            </a>
+              class="access-card__map-canvas"
+              role="img"
+              aria-label="エイト薬局の地図"
+            ></div>
           </div>
           <div class="access-card__info">
             <h3>エイト薬局</h3>
@@ -429,6 +408,7 @@
   </a>
 
   <script src="js/site-config.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script src="js/main.js"></script>
 </body>
 </html>

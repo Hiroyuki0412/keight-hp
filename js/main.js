@@ -28,26 +28,64 @@ function applyLineLinks() {
 
 applyLineLinks();
 
-/** Googleマップ：薬局位置にピン付きで表示 */
-function applyMapEmbed() {
-  const map = window.SITE_CONFIG?.MAP;
-  const iframe = document.getElementById("access-map");
-  const link = document.getElementById("access-map-link");
-  const tap = document.getElementById("access-map-tap");
-  if (!map || !iframe) return;
+/** 地図：座標にラベルを固定表示（操作不可） */
+let accessLeafletMap = null;
 
-  const { lat, lng, label, address } = map;
+function buildMapBadgeHtml(label, mapsUrl) {
+  return `
+    <a class="access-card__map-badge" href="${mapsUrl}" target="_blank" rel="noopener noreferrer" aria-label="${label}をGoogleマップで開く">
+      <span class="access-card__map-badge-pin" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+      </span>
+      <span class="access-card__map-badge-text">${label}</span>
+    </a>
+  `;
+}
+
+function applyMapEmbed() {
+  const mapCfg = window.SITE_CONFIG?.MAP;
+  const container = document.getElementById("access-map");
+  if (!mapCfg || !container || typeof L === "undefined") return;
+
+  const { lat, lng, label, address } = mapCfg;
+  const zoom = mapCfg.zoom ?? 18;
   const query = encodeURIComponent(`${label} ${address}`);
   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${query}`;
-  iframe.src = `https://www.google.com/maps?q=${lat},${lng}&hl=ja&z=18&output=embed`;
 
-  for (const el of [link, tap]) {
-    if (!el) continue;
-    el.href = mapsUrl;
-    if (el === link) {
-      el.setAttribute("aria-label", `${label}をGoogleマップで開く`);
-    }
+  if (accessLeafletMap) {
+    accessLeafletMap.setView([lat, lng], zoom);
+    return;
   }
+
+  const map = L.map(container, {
+    dragging: false,
+    touchZoom: false,
+    doubleClickZoom: false,
+    scrollWheelZoom: false,
+    boxZoom: false,
+    keyboard: false,
+    zoomControl: false,
+    attributionControl: true,
+  }).setView([lat, lng], zoom);
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>',
+    maxZoom: 19,
+  }).addTo(map);
+
+  const icon = L.divIcon({
+    className: "access-map-marker-icon",
+    html: buildMapBadgeHtml(label, mapsUrl),
+    iconSize: [1, 1],
+    iconAnchor: [0, 0],
+  });
+
+  L.marker([lat, lng], { icon, interactive: true }).addTo(map);
+  accessLeafletMap = map;
+
+  requestAnimationFrame(() => map.invalidateSize());
+  window.addEventListener("resize", () => map.invalidateSize());
 }
 
 applyMapEmbed();
