@@ -7,8 +7,8 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.k-eight.co.jp" }],
-      "destination": "https://k-eight.co.jp/:path*",
+      "has": [{ "type": "host", "value": "k-eight.co.jp" }],
+      "destination": "https://www.k-eight.co.jp/:path*",
       "permanent": true
     }
   ]
